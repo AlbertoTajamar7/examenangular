@@ -1,0 +1,12 @@
+img{
+    width: 150px;
+}
+.cajas{
+    border: solid 2px;
+    width: 33%;
+}
+.cuerpo{
+    width: 100vw;
+    overflow: scroll;
+    display: flex;
+}

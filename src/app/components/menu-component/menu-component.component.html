@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a [routerLink]="['/modelo']" class="nav-link">Cubos</a>
+        </li>
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Marcas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ng-container >
+              <a [routerLink]="['/marca']" class="dropdown-item"></a>
+            </ng-container>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Seguridad
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a [routerLink]="['login']" class="dropdown-item">Iniciar sesión</a>
+            <a [routerLink]="['registro']" class="dropdown-item">Registrarse</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="cuerpo">
+    @for (cubo of Cubos; track cubo){
+      <div class="cajas">
+        <img src={{cubo.imagen}} alt="">
+        <p>{{cubo.nombre}}</p>
+        <p>{{cubo.precio}}</p>
+        <button>Detalles</button>
+      </div>
+      
+    }
+  </div>
+  
